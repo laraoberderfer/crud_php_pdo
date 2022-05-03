@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Maio-2022 às 15:19
--- Versão do servidor: 10.4.17-MariaDB
--- versão do PHP: 8.0.0
+-- Generation Time: 03-Maio-2022 às 22:04
+-- Versão do servidor: 10.1.28-MariaDB
+-- PHP Version: 5.6.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `oficina`
+-- Database: `oficina`
 --
 
 -- --------------------------------------------------------
@@ -40,28 +41,62 @@ CREATE TABLE `produto` (
 
 INSERT INTO `produto` (`codigo`, `nome`, `descricao`, `preco`) VALUES
 (1, 'Bolo de morango', '1', 115),
-(3, 'Bolo de maçã', '100', 10),
-(4, 'Bolo de banana', '1', 3);
+(3, 'Bolo de maÃ§Ã£', 'bolinho', 13),
+(4, 'Bolo de banana', '1', 3),
+(5, 'Bolo quatro leites', 'Bolo quatro leites', 15);
+
+-- --------------------------------------------------------
 
 --
--- Índices para tabelas despejadas
+-- Estrutura da tabela `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `google_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `profile_image` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`id`, `google_id`, `name`, `email`, `profile_image`) VALUES
+(1, '1234', 'Administrador', 'admin@gmail.com', '');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `produto`
+-- Indexes for table `produto`
 --
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `produto`
+-- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
