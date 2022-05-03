@@ -9,9 +9,9 @@ if(isset($_SESSION['login_id'])){
 require 'google-api/vendor/autoload.php';
 $client = new Google_Client();
 //pegar do google https://console.cloud.google.com/apis/
-$client->setClientId('708518653071-aapej7bopvpnpglj5ebna2p588npsdpd.apps.googleusercontent.com');
+$client->setClientId('xxx');
 //pegar do google https://console.cloud.google.com/apis/
-$client->setClientSecret('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');
+$client->setClientSecret('xx');
 $client->setRedirectUri('http://localhost/oficina/');
 $client->addScope("email");
 $client->addScope("profile");
