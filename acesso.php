@@ -1,6 +1,7 @@
 <?php
 //PHP 5.6
   //Aprendendo CRUD (create-read-update-delete) com PHP, PDO e Bootstrap 5.1.3
+  //https://yourblogcoach.com/login-with-google-account-using-php/
   require_once "conexao.php";
   require_once "Produto.class.php";
   
