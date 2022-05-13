@@ -8,9 +8,9 @@ Necessita de:
 
 ------------------------------------------------------------------------------------------------
 #### Referências
-[W3Schools](https://www.w3schools.com/)
-[Autenticação com google](https://www.fabricadecodigo.com/adicionando-autenticacao-do-google-ao-seu-web-app/)
-[Login with google](https://yourblogcoach.com/login-with-google-account-using-php/)
+- [W3Schools](https://www.w3schools.com/)
+- [Autenticação com google](https://www.fabricadecodigo.com/adicionando-autenticacao-do-google-ao-seu-web-app/)
+- [Login with google](https://yourblogcoach.com/login-with-google-account-using-php/)
 
 -------------------------------------------------------------------------------------------------
 #### Autora
